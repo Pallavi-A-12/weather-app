@@ -67,4 +67,7 @@ Thumbs.db
 #extra
 README-template.md
 style-guide.md
+eslint.config.js
+vite.configjs
+
 
