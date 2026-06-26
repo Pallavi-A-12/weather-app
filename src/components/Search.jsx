@@ -15,10 +15,10 @@ export default function Search({
     e.preventDefault();
     onSearch(searchTerm);
   };
-
+  
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
-    if (e.target.value === "") {
+    if (e.target.value === "" && onCloseResults) {
       onCloseResults();
     }
   };
@@ -35,7 +35,8 @@ export default function Search({
           <input
             type="text"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleInputChange}
+            /*onChange={(e) => setSearchTerm(e.target.value)}*/
             placeholder="Search for a place..."
             className="w-full pl-10 pr-4 py-3 glass-card rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white transition-all duration-200"
             disabled={loading}

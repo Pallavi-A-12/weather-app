@@ -13,9 +13,9 @@ import retry from "./assets/images/icon-retry.svg";
 export default function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState({
-    name: "Berlin, Germany",
-    lat: 52.52,
-    lon: 13.405,
+    name: "New Delhi, India",
+    lat: 28.6214,
+    lon: 77.2148,
   });
   const [units, setUnits] = useState("metric");
   const [loading, setLoading] = useState(false);
@@ -138,7 +138,7 @@ export default function App() {
             </p>
 
             <button
-              onClick={fetchWeatherData}
+              onClick={loadWeatherData}
               className="flex items-center justify-center space-x-2 glass-card px-4 py-2 rounded-lg hover:bg-white/20 transition-all duration-200"
             >
               <img src={retry} alt="" className="mr-2 size-4" />
